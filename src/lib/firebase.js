@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 // import { seedDatabase } from '../seed';
 
 const config = {
-  apiKey: 'AIzaSyCQe_Jb43-luhIcRiBYn-RGR1lpiQHPW5E',
-  authDomain: 'fabgram-a4e3b.firebaseapp.com',
-  projectId: 'fabgram-a4e3b',
-  storageBucket: 'fabgram-a4e3b.appspot.com',
-  messagingSenderId: '933906181188',
-  appId: '1:933906181188:web:c9616eb6d31d5f65a62011',
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 // initialize firebase
