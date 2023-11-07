@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import FirebaseContext from '../context/firebase';
-import { auth } from '../lib/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import * as ROUTES from '../constants/routes';
 
 export default function Login() {
   const navigate = useNavigate();
-  const { firebase } = useContext(FirebaseContext);
+  const { auth } = useContext(FirebaseContext);
 
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
@@ -83,7 +82,7 @@ export default function Login() {
         <div className="flex justify-center items-center flex-col m-full bg-white p-4 rounded border border-gray-primary">
           <p className="text-sm">
             Don't have an account?{' '}
-            <Link to="/signup" className="font-bold text-blue-medium">
+            <Link to={ROUTES.SIGN_UP} className="font-bold text-blue-medium">
               Signup
             </Link>
           </p>
