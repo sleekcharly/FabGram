@@ -9,6 +9,7 @@ import * as ROUTES from './constants/routes';
 // allows splitting of huge bundles into chunks
 const Login = lazy(() => import('./pages/login'));
 const Signup = lazy(() => import('./pages/signup'));
+const NotFound = lazy(() => import('./pages/not-found'));
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.SIGN_UP} element={<Signup />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </Router>
